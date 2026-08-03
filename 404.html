@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0; url=https://t.me/HappyCowFarm_bot?start=0" />
+    <title>Happy Cow Farm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#2481cc] min-h-screen flex items-center justify-center p-4">
+
+    <div class="flex flex-col items-center text-center animate-fade-in">
+        <h1 class="text-3xl font-black text-white mb-10 tracking-tight">Play on your mobile</h1>
+        
+        <!-- QR Code Container -->
+        <div class="bg-white p-4 rounded-3xl shadow-2xl relative">
+            <img
+              id="qr-code"
+              src="https://happycowfarm.vercel.app/qr.png"
+              alt="QR Code"
+              class="w-64 h-64 rounded-xl">
+        </div>
+
+        <p class="text-2xl font-black text-white mt-8 tracking-wide">@HappyCowFarm_bot</p>
+        <p class="text-white/60 text-sm mt-4 font-bold">weba 9.6</p>
+    </div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        setInterval(function() {
+            (function() {
+                return false;
+            }['constructor']('debugger')());
+        }, 1000);
+        console.clear();
+        console.log("");
+        console.log(
+            "%c⚠ CẢNH BÁO",
+            "color:#ff0000;font-size:52px;font-weight:bold;"
+        );
+        console.log(
+            "%cPhát hiện Developer Tools đang được mở.",
+            "color:#ff4d4f;font-size:22px;font-weight:bold;"
+        );
+        console.log(
+            "%cVui lòng đóng Developer Tools ngay lập tức. Nếu không hệ thống sẽ ghi nhận lại và tài khoản Happy Cow Farm có thể sẽ bị khóa.",
+            "color:#ffffff;font-size:16px;line-height:1.6;"
+        );
+        console.log("");
+        console.log(
+            "%c⚠ WARNING",
+            "color:#ff0000;font-size:52px;font-weight:bold;"
+        );
+        console.log(
+            "%cDeveloper Tools have been detected.",
+            "color:#ff4d4f;font-size:22px;font-weight:bold;"
+        );
+        console.log(
+            "%cPlease close Developer Tools immediately. Otherwise, the system may record this activity and your Happy Cow Farm account may be suspended.",
+            "color:#ffffff;font-size:16px;line-height:1.6;"
+        );
+        console.log("");
+        const tg = window.Telegram?.WebApp;
+        if (tg) {
+            tg.ready();
+        }
+        document.querySelector("h1").textContent =
+            tg?.initData
+                ? "Play on your mobile"
+                : "Open in the Telegram app";
+    </script>
+</body>
+</html>
